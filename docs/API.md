@@ -20,5 +20,7 @@ Success: HTTP 200 with a JSON result. Invalid domain commands: HTTP 400 with `{"
 - `claim`: optional `lease` (seconds, >0 and <=3600). Returns one leased job or null. Save its `id` and `token`.
 - `finish`: `id`, `token`, optional `error`. Omit error for success; include an error message for failure.
 - `list`: returns all jobs.
+- `report`: `id`, `token`; commits a local report and deduplication receipt while the lease is valid.
+- `reports`: returns committed local report rows.
 
 Do not acknowledge a job after its lease expires. Claim returns raw payload as a JSON-encoded string. Consumers decode it before processing. External effects must be idempotent.

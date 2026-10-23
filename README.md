@@ -6,6 +6,16 @@ Independent engineering project built around realistic failure scenarios. Exampl
 
 **[Live interactive demo](https://vinaychowdary9946-blip.github.io/demos/resilient-job-queue/)** · [Architecture](docs/ARCHITECTURE.md) · [API guide](docs/API.md) · [Verification](docs/VERIFICATION.md)
 
+## Flagship: Worker Crash Lab
+
+**400 real child-process exits, eight scenarios, auditable per-job evidence.** In a 50-job commit-before-acknowledgment scenario, the control handler created 50 duplicate report rows; the transactional receipt handler created zero. This is a bounded single-database experiment, not a globally exactly-once claim.
+
+[Read the experiment and interview walkthrough](docs/CRASH_LAB.md) · [Raw evidence](evidence/crash-results.json)
+
+```sh
+python crash_lab.py --jobs 50 --output evidence/crash-results.json
+```
+
 ## What it does
 
 Idempotent enqueue with payload conflict detection; atomic claims; lease recovery; capped exponential retry with full jitter; dead-letter state; durable SQLite storage.
@@ -35,7 +45,7 @@ Open http://127.0.0.1:8000 for the browser simulation. The local server also exp
 
 ## Engineering boundaries
 
-At-least-once delivery: a handler can perform a side effect and crash before acknowledgment. External side effects must implement their own idempotency using the job key. There is no distributed broker, lease heartbeat, priority scheduling, or multi-host coordination. SQLite permits one writer at a time. Expired leases are recovered on the next claim. The included worker only prints a payload; it does not contact a reporting service.
+At-least-once delivery: a handler can perform a side effect and crash before acknowledgment. External side effects must implement their own idempotency using the job key. There is no distributed broker, lease heartbeat, priority scheduling, or multi-host coordination. SQLite permits one writer at a time. Expired leases are recovered on the next claim. The included worker commits a local report and deduplication receipt atomically; it does not contact an external reporting service.
 
 ## Development
 

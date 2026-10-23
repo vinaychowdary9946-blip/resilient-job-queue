@@ -17,7 +17,13 @@ class Queue:
         status TEXT NOT NULL, attempts INTEGER NOT NULL DEFAULT 0,
         max_attempts INTEGER NOT NULL, available REAL NOT NULL,
         token TEXT, expires REAL, error TEXT);
-        CREATE INDEX IF NOT EXISTS ready ON jobs(status, available);''')
+        CREATE INDEX IF NOT EXISTS ready ON jobs(status, available);
+        CREATE TABLE IF NOT EXISTS reports (
+        sequence INTEGER PRIMARY KEY AUTOINCREMENT, job_id TEXT NOT NULL,
+        report_json TEXT NOT NULL);
+        CREATE TABLE IF NOT EXISTS receipts (
+        job_id TEXT PRIMARY KEY, report_sequence INTEGER NOT NULL,
+        result_json TEXT NOT NULL);''')
 
     def close(self):
         self.db.close()
@@ -44,7 +50,7 @@ class Queue:
             raise
 
     def claim(self, lease=30):
-        if not isinstance(lease, (int, float)) or not 0 < lease <= 3600:
+        if type(lease) not in (int, float) or not 0 < lease <= 3600:
             raise ValueError('Lease must be in (0, 3600] seconds')
         now = self.clock()
         self.db.execute('BEGIN IMMEDIATE')
@@ -69,13 +75,58 @@ class Queue:
             if not row:
                 raise ValueError('Lease expired or token is stale')
             state = 'done' if error is None else ('dead' if row['attempts'] >= row['max_attempts'] else 'pending')
-            delay = random.uniform(0, min(60, 2 ** row['attempts'])) if error else 0
-            self.db.execute('UPDATE jobs SET status=?,available=?,token=NULL,expires=NULL,error=? WHERE id=?', (state, self.clock()+delay, str(error)[:1000] if error else None, ident))
+            delay = random.uniform(0, min(60, 2 ** row['attempts'])) if error is not None else 0
+            self.db.execute('UPDATE jobs SET status=?,available=?,token=NULL,expires=NULL,error=? WHERE id=?', (state, self.clock()+delay, str(error)[:1000] if error is not None else None, ident))
             self.db.execute('COMMIT')
             return state
         except Exception:
             self.db.execute('ROLLBACK')
             raise
+
+    def apply_local_report(self, ident, token, *, _fault=None):
+        """Commit a local report and deduplication receipt in one transaction.
+
+        This guarantee is restricted to this database. An external email, HTTP
+        request or payment cannot be made atomic by this method. `_fault` is an
+        internal test hook and is never exposed through the HTTP API.
+        """
+        self.db.execute('BEGIN IMMEDIATE')
+        try:
+            job = self.db.execute(
+                "SELECT * FROM jobs WHERE id=? AND token=? AND status='running' AND expires>?",
+                (ident, token, self.clock()),
+            ).fetchone()
+            if not job:
+                raise ValueError('Lease expired or token is stale')
+            receipt = self.db.execute(
+                'SELECT result_json FROM receipts WHERE job_id=?', (ident,)
+            ).fetchone()
+            if receipt:
+                result = json.loads(receipt['result_json'])
+            else:
+                payload = json.loads(job['payload'])
+                result = {'job_key': job['key'], 'input': payload}
+                encoded = json.dumps(result, sort_keys=True, allow_nan=False)
+                cursor = self.db.execute(
+                    'INSERT INTO reports(job_id,report_json) VALUES(?,?)', (ident, encoded)
+                )
+                self.db.execute(
+                    'INSERT INTO receipts(job_id,report_sequence,result_json) VALUES(?,?,?)',
+                    (ident, cursor.lastrowid, encoded),
+                )
+            if _fault:
+                _fault('before_commit')
+            self.db.execute('COMMIT')
+        except Exception:
+            if self.db.in_transaction:
+                self.db.execute('ROLLBACK')
+            raise
+        if _fault:
+            _fault('after_commit')
+        return result
+
+    def reports(self):
+        return [dict(row) for row in self.db.execute('SELECT * FROM reports ORDER BY sequence')]
 
     def jobs(self):
         return [dict(r) for r in self.db.execute('SELECT * FROM jobs ORDER BY available,id')]
@@ -96,8 +147,7 @@ if __name__ == '__main__':
         elif args.action == 'work':
             job = q.claim()
             if job:
-                # Deliberately safe sample handler: no external side effects.
-                print('Processed:', json.loads(job['payload']))
+                print('Committed local report:', q.apply_local_report(job['id'], job['token']))
                 q.finish(job['id'], job['token'])
             else:
                 print('No available jobs')

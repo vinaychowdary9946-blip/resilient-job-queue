@@ -26,6 +26,8 @@ class Handler(SimpleHTTPRequestHandler):
     elif action=='claim': result=engine.claim(data.get('lease',30))
     elif action=='finish': result=engine.finish(data['id'],data['token'],data.get('error'))
     elif action=='list': result=engine.jobs()
+    elif action=='report': result=engine.apply_local_report(data['id'],data['token'])
+    elif action=='reports': result=engine.reports()
     else: raise ValueError('Unknown action')
    finally: engine.close()
    self.reply(200,result)

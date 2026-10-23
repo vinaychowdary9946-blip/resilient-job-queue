@@ -24,3 +24,8 @@ Domain tests exercise actual state transitions, validation, and failure cases. A
 - Ledger: receipt and shipment, negative-stock rejection, duplicate command, version conflict, reset and export.
 
 Public demos use browser memory, not the Python database. They are intended for design exploration. No load-test, uptime, penetration-test, or production performance claim is made.
+
+## Follow-up audit
+
+Local Python 3.12: 19 tests passed after the follow-up changes. Added malformed/non-object JSON and request-size regression coverage. Also added real subprocess crash recovery, atomic report receipts, stale-worker side-effect rejection, rollback consistency, empty-error backoff and Boolean-lease rejection. The 50-job-per-scenario experiment separately completed 400 injected process exits.
+The earlier CI links above apply to the initial implementation; consult Actions for follow-up commit results.

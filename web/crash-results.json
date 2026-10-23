@@ -1,0 +1,2518 @@
+{
+  "schema_version": 1,
+  "experiment": "Local report side effects under process termination",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "jobs_per_scenario": 50,
+  "scenarios": [
+    {
+      "mode": "unprotected",
+      "crash_point": "before_effect",
+      "submitted": 50,
+      "process_crashes": 50,
+      "completed": 50,
+      "business_effects": 50,
+      "duplicate_effects": 0,
+      "missing_effects": 0,
+      "database_integrity": "ok",
+      "jobs": [
+        {
+          "key": "report-0000",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0001",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0002",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0003",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0004",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0005",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0006",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0007",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0008",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0009",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0010",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0011",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0012",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0013",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0014",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0015",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0016",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0017",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0018",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0019",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0020",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0021",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0022",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0023",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0024",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0025",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0026",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0027",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0028",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0029",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0030",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0031",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0032",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0033",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0034",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0035",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0036",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0037",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0038",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0039",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0040",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0041",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0042",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0043",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0044",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0045",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0046",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0047",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0048",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0049",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        }
+      ]
+    },
+    {
+      "mode": "unprotected",
+      "crash_point": "before_commit",
+      "submitted": 50,
+      "process_crashes": 50,
+      "completed": 50,
+      "business_effects": 50,
+      "duplicate_effects": 0,
+      "missing_effects": 0,
+      "database_integrity": "ok",
+      "jobs": [
+        {
+          "key": "report-0000",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0001",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0002",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0003",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0004",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0005",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0006",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0007",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0008",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0009",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0010",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0011",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0012",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0013",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0014",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0015",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0016",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0017",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0018",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0019",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0020",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0021",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0022",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0023",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0024",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0025",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0026",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0027",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0028",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0029",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0030",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0031",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0032",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0033",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0034",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0035",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0036",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0037",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0038",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0039",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0040",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0041",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0042",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0043",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0044",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0045",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0046",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0047",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0048",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0049",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        }
+      ]
+    },
+    {
+      "mode": "unprotected",
+      "crash_point": "after_commit",
+      "submitted": 50,
+      "process_crashes": 50,
+      "completed": 50,
+      "business_effects": 100,
+      "duplicate_effects": 50,
+      "missing_effects": 0,
+      "database_integrity": "ok",
+      "jobs": [
+        {
+          "key": "report-0000",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0001",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0002",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0003",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0004",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0005",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0006",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0007",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0008",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0009",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0010",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0011",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0012",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0013",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0014",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0015",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0016",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0017",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0018",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0019",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0020",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0021",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0022",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0023",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0024",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0025",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0026",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0027",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0028",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0029",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0030",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0031",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0032",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0033",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0034",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0035",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0036",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0037",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0038",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0039",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0040",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0041",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0042",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0043",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0044",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0045",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0046",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0047",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0048",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        },
+        {
+          "key": "report-0049",
+          "attempts": 2,
+          "status": "done",
+          "effects": 2
+        }
+      ]
+    },
+    {
+      "mode": "unprotected",
+      "crash_point": "after_ack",
+      "submitted": 50,
+      "process_crashes": 50,
+      "completed": 50,
+      "business_effects": 50,
+      "duplicate_effects": 0,
+      "missing_effects": 0,
+      "database_integrity": "ok",
+      "jobs": [
+        {
+          "key": "report-0000",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0001",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0002",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0003",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0004",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0005",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0006",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0007",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0008",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0009",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0010",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0011",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0012",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0013",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0014",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0015",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0016",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0017",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0018",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0019",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0020",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0021",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0022",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0023",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0024",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0025",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0026",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0027",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0028",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0029",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0030",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0031",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0032",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0033",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0034",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0035",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0036",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0037",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0038",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0039",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0040",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0041",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0042",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0043",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0044",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0045",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0046",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0047",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0048",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0049",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        }
+      ]
+    },
+    {
+      "mode": "protected",
+      "crash_point": "before_effect",
+      "submitted": 50,
+      "process_crashes": 50,
+      "completed": 50,
+      "business_effects": 50,
+      "duplicate_effects": 0,
+      "missing_effects": 0,
+      "database_integrity": "ok",
+      "jobs": [
+        {
+          "key": "report-0000",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0001",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0002",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0003",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0004",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0005",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0006",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0007",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0008",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0009",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0010",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0011",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0012",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0013",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0014",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0015",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0016",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0017",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0018",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0019",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0020",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0021",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0022",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0023",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0024",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0025",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0026",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0027",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0028",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0029",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0030",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0031",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0032",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0033",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0034",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0035",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0036",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0037",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0038",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0039",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0040",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0041",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0042",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0043",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0044",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0045",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0046",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0047",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0048",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0049",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        }
+      ]
+    },
+    {
+      "mode": "protected",
+      "crash_point": "before_commit",
+      "submitted": 50,
+      "process_crashes": 50,
+      "completed": 50,
+      "business_effects": 50,
+      "duplicate_effects": 0,
+      "missing_effects": 0,
+      "database_integrity": "ok",
+      "jobs": [
+        {
+          "key": "report-0000",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0001",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0002",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0003",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0004",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0005",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0006",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0007",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0008",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0009",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0010",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0011",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0012",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0013",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0014",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0015",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0016",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0017",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0018",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0019",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0020",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0021",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0022",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0023",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0024",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0025",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0026",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0027",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0028",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0029",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0030",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0031",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0032",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0033",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0034",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0035",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0036",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0037",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0038",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0039",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0040",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0041",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0042",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0043",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0044",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0045",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0046",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0047",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0048",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0049",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        }
+      ]
+    },
+    {
+      "mode": "protected",
+      "crash_point": "after_commit",
+      "submitted": 50,
+      "process_crashes": 50,
+      "completed": 50,
+      "business_effects": 50,
+      "duplicate_effects": 0,
+      "missing_effects": 0,
+      "database_integrity": "ok",
+      "jobs": [
+        {
+          "key": "report-0000",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0001",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0002",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0003",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0004",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0005",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0006",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0007",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0008",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0009",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0010",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0011",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0012",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0013",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0014",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0015",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0016",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0017",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0018",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0019",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0020",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0021",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0022",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0023",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0024",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0025",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0026",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0027",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0028",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0029",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0030",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0031",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0032",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0033",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0034",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0035",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0036",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0037",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0038",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0039",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0040",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0041",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0042",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0043",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0044",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0045",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0046",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0047",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0048",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0049",
+          "attempts": 2,
+          "status": "done",
+          "effects": 1
+        }
+      ]
+    },
+    {
+      "mode": "protected",
+      "crash_point": "after_ack",
+      "submitted": 50,
+      "process_crashes": 50,
+      "completed": 50,
+      "business_effects": 50,
+      "duplicate_effects": 0,
+      "missing_effects": 0,
+      "database_integrity": "ok",
+      "jobs": [
+        {
+          "key": "report-0000",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0001",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0002",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0003",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0004",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0005",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0006",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0007",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0008",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0009",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0010",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0011",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0012",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0013",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0014",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0015",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0016",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0017",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0018",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0019",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0020",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0021",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0022",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0023",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0024",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0025",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0026",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0027",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0028",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0029",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0030",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0031",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0032",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0033",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0034",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0035",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0036",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0037",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0038",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0039",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0040",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0041",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0042",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0043",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0044",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0045",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0046",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0047",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0048",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        },
+        {
+          "key": "report-0049",
+          "attempts": 1,
+          "status": "done",
+          "effects": 1
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "queue_engine.py": "333b3c0da6262914ca67664240dd4c8f9fd3670076167df9600a4a7a2668010b",
+    "crash_lab.py": "b947cc733402891e9a44cc33510a66afea7b9057b1cdeaec85a9e92ff9b3da71"
+  },
+  "scope": "Single SQLite database; real child process exits; virtual lease time; synthetic reports. Not a power-loss, external API, throughput, or globally exactly-once guarantee."
+}

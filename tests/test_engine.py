@@ -30,4 +30,31 @@ class QueueTests(unittest.TestCase):
  def test_validation(self):
   for key,attempts in [('',3),('a',0),('a',True)]:
    with self.assertRaises(ValueError): self.q.enqueue(key,{},attempts)
+ def test_empty_error_still_has_backoff(self):
+  from unittest.mock import patch
+  self.q.enqueue('a',{}); job=self.q.claim()
+  with patch('queue_engine.random.uniform', return_value=1):
+   self.q.finish(job['id'],job['token'],'')
+  self.assertEqual(self.q.jobs()[0]['available'],101)
+  self.assertEqual(self.q.jobs()[0]['error'],'')
+ def test_bool_lease_rejected(self):
+  with self.assertRaises(ValueError): self.q.claim(True)
+ def test_report_replay_after_lease_recovery(self):
+  self.q.enqueue('a',{'x':1}); job=self.q.claim(1)
+  result=self.q.apply_local_report(job['id'],job['token'])
+  self.now=102; retry=self.q.claim()
+  self.assertEqual(result,self.q.apply_local_report(retry['id'],retry['token']))
+  self.assertEqual(len(self.q.reports()),1)
+ def test_report_rejects_stale_worker(self):
+  self.q.enqueue('a',{}); job=self.q.claim(1); self.now=102
+  with self.assertRaises(ValueError): self.q.apply_local_report(job['id'],job['token'])
+  self.assertEqual(self.q.reports(),[])
+ def test_report_rollback_keeps_receipt_consistent(self):
+  self.q.enqueue('a',{}); job=self.q.claim()
+  def fail(_): raise RuntimeError('injected exception')
+  with self.assertRaises(RuntimeError): self.q.apply_local_report(job['id'],job['token'],_fault=fail)
+  self.assertEqual(self.q.reports(),[])
+  self.assertEqual(self.q.db.execute('SELECT COUNT(*) FROM receipts').fetchone()[0],0)
+  self.q.apply_local_report(job['id'],job['token'])
+  self.assertEqual(len(self.q.reports()),1)
 if __name__=='__main__': unittest.main()

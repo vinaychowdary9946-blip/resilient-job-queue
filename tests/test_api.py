@@ -22,3 +22,25 @@ class APITests(unittest.TestCase):
  def test_foreign_origin(self):
   with self.assertRaises(HTTPError) as cm: urlopen(Request(self.url,data=b'{}',headers={'Origin':'https://example.com'}))
   self.assertEqual(cm.exception.code,403)
+
+ def test_malformed_and_nonobject_json(self):
+  for payload in [b'[]', b'null', b'{bad', b'1']:
+   with self.subTest(payload=payload):
+    with self.assertRaises(HTTPError) as cm:
+     urlopen(Request(self.url,data=payload))
+    self.assertEqual(cm.exception.code,400)
+ def test_oversized_body(self):
+  with self.assertRaises(HTTPError) as cm:
+   urlopen(Request(self.url,data=b' '*100001))
+  self.assertEqual(cm.exception.code,400)
+
+ def test_report_api_is_idempotent(self):
+  def post(body):
+   with urlopen(Request(self.url,data=json.dumps(body).encode())) as response:
+    return json.load(response)
+  post({'action':'enqueue','key':'api-report','payload':{'sample':True}})
+  job=post({'action':'claim'})
+  request={'action':'report','id':job['id'],'token':job['token']}
+  self.assertEqual(post(request),post(request))
+  self.assertEqual(len(post({'action':'reports'})),1)
+  self.assertEqual(post({'action':'finish','id':job['id'],'token':job['token']}),'done')
