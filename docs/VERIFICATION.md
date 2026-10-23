@@ -29,3 +29,5 @@ Public demos use browser memory, not the Python database. They are intended for 
 
 Local Python 3.12: 19 tests passed after the follow-up changes. Added malformed/non-object JSON and request-size regression coverage. Also added real subprocess crash recovery, atomic report receipts, stale-worker side-effect rejection, rollback consistency, empty-error backoff and Boolean-lease rejection. The 50-job-per-scenario experiment separately completed 400 injected process exits.
 The earlier CI links above apply to the initial implementation; consult Actions for follow-up commit results.
+
+Follow-up hosted CI: all six jobs passed on Windows and Ubuntu with Python 3.10, 3.12, and 3.13. [Verified audit run](https://github.com/vinaychowdary9946-blip/resilient-job-queue/actions/runs/39998120445).
