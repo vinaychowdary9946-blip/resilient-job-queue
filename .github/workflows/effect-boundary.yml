@@ -1,0 +1,39 @@
+name: Effect Boundary Lab
+on:
+  push:
+    paths: ['research/effect-boundary-lab/**', '.github/workflows/effect-boundary.yml']
+  pull_request:
+    paths: ['research/effect-boundary-lab/**', '.github/workflows/effect-boundary.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.10', '3.12', '3.13']
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: research/effect-boundary-lab
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Verify released evidence
+        run: python verify.py evidence/results.json
+      - name: Contract and crash-matrix tests
+        run: python -m unittest -v test_lab
+      - name: Reproduce smoke factorial
+        run: python lab.py run --seeds 2 --output evidence/smoke.json
+      - name: Verify reproduced evidence
+        run: python verify.py evidence/smoke.json
+      - name: Reproduce ambiguity witness
+        run: python witness.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: effect-boundary-${{ matrix.os }}-${{ matrix.python }}
+          path: research/effect-boundary-lab/evidence/

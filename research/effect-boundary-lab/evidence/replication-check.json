@@ -1,0 +1,10 @@
+{
+  "primary_trials": 1152,
+  "replication_trials": 1152,
+  "semantic_summary_identical": true,
+  "independent_verification": "both passed",
+  "files_sha256": {
+    "results.json": "add9df429fcab0ba7a27e8a99984ca44d02338a69540072b1db849fa360c9d94",
+    "replication.json": "8af1b4ef4ebebdcb60602efc1bc8eff20d4a6ee6917817bd91021672377534c8"
+  }
+}

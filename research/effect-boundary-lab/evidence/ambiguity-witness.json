@@ -1,0 +1,43 @@
+{
+  "study": "Durable-state ambiguity witness",
+  "histories": [
+    {
+      "crash": "before_send",
+      "worker_observation": {
+        "status": "crashed"
+      },
+      "durable_client_state": [
+        "f22233b610bb71bf2aed636abf364a3c2467c17015c262776d7ce4f90205938b",
+        0,
+        null
+      ],
+      "remote_effect_count": 0,
+      "recovery": {
+        "status": "quarantined",
+        "hash": "f22233b610bb71bf2aed636abf364a3c2467c17015c262776d7ce4f90205938b"
+      }
+    },
+    {
+      "crash": "after_effect",
+      "worker_observation": {
+        "status": "crashed"
+      },
+      "durable_client_state": [
+        "f22233b610bb71bf2aed636abf364a3c2467c17015c262776d7ce4f90205938b",
+        0,
+        null
+      ],
+      "remote_effect_count": 1,
+      "recovery": {
+        "status": "quarantined",
+        "hash": "f22233b610bb71bf2aed636abf364a3c2467c17015c262776d7ce4f90205938b"
+      }
+    }
+  ],
+  "equal_client_state": true,
+  "different_remote_outcomes": true,
+  "source_sha256": {
+    "witness.py": "c0565ff69e8bea9765c7079625956d8298d4d1cbcde786f65bd9243350952630",
+    "lab.py": "cceff5212a6f2d6e0f1ab0425a046ee94db597baa78d565a57c748b146bae80a"
+  }
+}

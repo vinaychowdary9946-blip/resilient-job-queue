@@ -16,6 +16,12 @@ Independent engineering project built around realistic failure scenarios. Exampl
 python crash_lab.py --jobs 50 --output evidence/crash-results.json
 ```
 
+## Independent research: Effect Boundary Lab
+
+[Research artifact, report and reproduction](research/effect-boundary-lab/README.md) · [Professor-facing evidence explorer](https://vinaychowdary9946-blip.github.io/research/)
+
+A separate cross-database HTTP study: 1,152 trials, 1,008 real worker exits, four policies, retention-expiry and changed-payload scenarios, an independent metric verifier and an executable ambiguity witness. The guard prevents observed excess effects but quarantines uncertain work; the report measures that completion cost. Released as an independent technical report, not a peer-reviewed publication.
+
 ## What it does
 
 Idempotent enqueue with payload conflict detection; atomic claims; lease recovery; capped exponential retry with full jitter; dead-letter state; durable SQLite storage.
