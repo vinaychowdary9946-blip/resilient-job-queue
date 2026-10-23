@@ -1,0 +1,7 @@
+{
+  "action": "enqueue",
+  "key": "report-001",
+  "payload": {
+    "report": "daily-sales"
+  }
+}
