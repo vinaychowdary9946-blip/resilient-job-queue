@@ -38,6 +38,6 @@
   "different_remote_outcomes": true,
   "source_sha256": {
     "witness.py": "c0565ff69e8bea9765c7079625956d8298d4d1cbcde786f65bd9243350952630",
-    "lab.py": "cceff5212a6f2d6e0f1ab0425a046ee94db597baa78d565a57c748b146bae80a"
+    "lab.py": "944f1b1a3cd63202d5330f197c1dee4e1d3dc94bab9905372f2935b533883fda"
   }
 }

@@ -18,6 +18,11 @@ class ContractTests(unittest.TestCase):
         self.payload = {"op": "payment", "value": 10}
     def tearDown(self):
         self.tmp.cleanup()
+    def test_connection_is_closed(self):
+        with lab.connect(self.db) as connection:
+            connection.execute('SELECT 1')
+        with self.assertRaises(sqlite3.ProgrammingError):
+            connection.execute('SELECT 1')
     def test_atomic_key_replay(self):
         first = lab.apply_effect(self.db, "x", self.payload, 0)
         again = lab.apply_effect(self.db, "x", self.payload, 1)

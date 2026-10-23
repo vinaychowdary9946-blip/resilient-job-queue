@@ -8,7 +8,7 @@ Release v1.0, 23 October 2026.
 - Second complete run: another 1,152 trials and 1,008 exits. Semantic summaries matched exactly. Diagnostic timings differ.
 - Independent verifier passed on both complete runs; the full factorial grid and 32 summary groups were checked.
 - JSON summary and CSV matched. SHA-256 of both raw files is in evidence/replication-check.json.
-- 15 research test methods passed, no skips; includes a 32-case subprocess crash matrix, 16 concurrent destination requests, expiry boundaries, conflict detection, malformed input, witness reproduction and deliberate evidence tampering.
+- 16 research test methods passed, no skips; includes a 32-case subprocess crash matrix, 16 concurrent destination requests, expiry boundaries, conflict detection, malformed input, witness reproduction and deliberate evidence tampering.
 - Existing parent queue suite: 19 tests passed.
 - Two-history ambiguity witness reproduced equal persistent client state and different remote effect counts (0 and 1).
 - Research JavaScript and shared portfolio JavaScript passed Node syntax checks. All 62 local links/references across home/research pages resolved; no duplicate HTML IDs.
@@ -31,3 +31,7 @@ For another full run use lab.py run --seeds 12 --output evidence/new-run.json an
 ## Boundaries
 
 No physical power-loss, public network, live external provider, multi-host, production security, energy or throughput validation was performed. The provider remains in the controller process. The published metrics are deterministic synthetic outcomes with explicit incomplete-work accounting.
+
+## Portability correction
+
+The first hosted matrix exposed open SQLite connection handles during Windows temporary-file cleanup. The connection context now closes handles in a finally block, with a regression test that rejects use after context exit. Both full evidence runs were regenerated against the corrected lab source and reverified; semantic summaries remained identical.

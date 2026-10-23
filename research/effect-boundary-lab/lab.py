@@ -3,6 +3,7 @@ Python 3.10+, standard library only. Never use this simulator for real transacti
 """
 import argparse
 import csv
+from contextlib import contextmanager
 import hashlib
 import json
 import os
@@ -30,11 +31,16 @@ def fingerprint(payload):
     return hashlib.sha256(json.dumps(payload, sort_keys=True, separators=(",", ":"),
                                      allow_nan=False).encode()).hexdigest()
 
+@contextmanager
 def connect(path):
     con = sqlite3.connect(str(path), timeout=10, isolation_level=None)
-    con.execute("PRAGMA journal_mode=WAL")
-    con.execute("PRAGMA synchronous=FULL")
-    return con
+    try:
+        con.execute("PRAGMA journal_mode=WAL")
+        con.execute("PRAGMA synchronous=FULL")
+        with con:
+            yield con
+    finally:
+        con.close()
 
 def init_provider(path):
     with connect(path) as c:
