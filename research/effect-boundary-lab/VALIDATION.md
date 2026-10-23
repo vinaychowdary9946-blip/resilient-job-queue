@@ -15,7 +15,7 @@ Release v1.0, 23 October 2026.
 - Browser: professor/hiring switch, 32 scenario/workload filter combinations, recorded trial display, dark appearance and 375 CSS-pixel mobile frames checked. Both home/research content widths fit their mobile viewports.
 - Four-page report and one-page brief were rendered and visually reviewed. PDF fonts are embedded.
 
-These are completed local checks, not independent external replication. Hosted cross-platform CI is configured; its results must be read from the linked run before being claimed as passed.
+These are completed local checks, not independent external replication. Hosted research CI passed all six Windows/Ubuntu configurations on Python 3.10, 3.12 and 3.13. The separate parent queue workflow also passed.
 
 ## Reproduce validation
 
@@ -35,3 +35,11 @@ No physical power-loss, public network, live external provider, multi-host, prod
 ## Portability correction
 
 The first hosted matrix exposed open SQLite connection handles during Windows temporary-file cleanup. The connection context now closes handles in a finally block, with a regression test that rejects use after context exit. Both full evidence runs were regenerated against the corrected lab source and reverified; semantic summaries remained identical.
+
+## Hosted verification
+
+All six research jobs passed: https://github.com/vinaychowdary9946-blip/resilient-job-queue/actions/runs/40007082064
+
+Each job verified the released evidence, ran the 16 research tests, reproduced a two-seed factorial run, verified its output and reproduced the paired witness. The parent queue matrix also passed: https://github.com/vinaychowdary9946-blip/resilient-job-queue/actions/runs/40007082335
+
+The code commit tested was 0e792f2511c098d380814b20e21ce3c563451139. Subsequent documentation updates do not change the measured implementation.

@@ -4,7 +4,7 @@
 
 An independent empirical systems study by Vinay Muppalla. This artifact crosses the local-database boundary of the earlier Worker Crash Lab: real worker processes call a loopback HTTP destination with its own SQLite database and expiring duplicate-protection records.
 
-[Professor and hiring-team views](https://vinaychowdary9946-blip.github.io/research/) · [Technical report](paper.md) · [Research brief](brief.md) · [Study protocol](PROTOCOL.md) · [Raw evidence](evidence/results.json) · [Related work](RELATED_WORK.md)
+[Professor and hiring-team views](https://vinaychowdary9946-blip.github.io/research/) · [Technical report](paper.md) · [Research brief](brief.md) · [Study protocol](PROTOCOL.md) · [Raw evidence](evidence/results.json) · [Related work](RELATED_WORK.md) · [Discussion guide](DISCUSSION_GUIDE.md)
 
 ## Recorded results
 
