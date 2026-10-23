@@ -10,7 +10,12 @@ python -m unittest discover -s tests -v
 
 Domain tests exercise actual state transitions, validation, and failure cases. API tests start a loopback server on an ephemeral port and send real HTTP requests. No external customer systems are called. Randomized planner tests use a fixed seed for reproducibility.
 
-Local validation uses Python 3.12. GitHub Actions defines a broader OS/version matrix; a configured workflow is not evidence that all hosted jobs have passed. Consult the Actions tab for current results.
+## Verified results — 2026-10-23
+
+- Local Python 3.12: **10 tests passed** in this repository.
+- Hosted CI: **all six matrix jobs passed**, covering Python 3.10, 3.12 and 3.13 on Ubuntu and Windows.
+- [Verified CI run](https://github.com/vinaychowdary9946-blip/resilient-job-queue/actions/runs/39996431889). This records the implementation commit; consult Actions for subsequent runs.
+- Deployed browser checks passed for the applicable core scenarios below. Desktop layout was visually inspected; responsive CSS is included, but physical mobile-device testing was not performed.
 
 ## Browser scenarios
 
